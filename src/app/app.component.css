@@ -1,11 +1,15 @@
-.key {
+#partition {
+  margin-top: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  min-height: 50px;
+}
+
+.note {
   display: inline-block;
-  width: 50px;
-  height: 50px;
   margin: 5px;
-  background-color: lightgray;
-  text-align: center;
-  line-height: 50px;
-  font-size: 20px;
-  cursor: pointer;
+  padding: 5px;
+  background-color: lightblue;
+  border: 1px solid blue;
+  border-radius: 3px;
 }

@@ -16,6 +16,7 @@ export class AppComponent {
     const note = this.getNoteFromKey(event.key);
     if (note) {
       this.synth.triggerAttackRelease(note, '8n');
+      this.addNoteToPartition(note);
     }
   }
 
@@ -30,5 +31,15 @@ export class AppComponent {
       'j': 'B4'
     };
     return keyMap[key] || null;
+  }
+
+  addNoteToPartition(note: string) {
+    const partition = document.getElementById('partition');
+    if (partition) {
+      const noteElement = document.createElement('div');
+      noteElement.className = 'note';
+      noteElement.innerText = note;
+      partition.appendChild(noteElement);
+    }
   }
 }
